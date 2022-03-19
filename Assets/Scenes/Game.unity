@@ -206,6 +206,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &455416382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5072392598586527878, guid: 6e43c6d04a6604c43943d2b6ce041529, type: 3}
+  m_PrefabInstance: {fileID: 511878182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &455416383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2482258047623860423, guid: 6e43c6d04a6604c43943d2b6ce041529, type: 3}
+  m_PrefabInstance: {fileID: 511878182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455416382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff8f85bf26777044834e0d97d23ac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &455416384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455416382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff8f85bf26777044834e0d97d23ac92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpVelocity: {x: 2, y: 10}
 --- !u!1001 &456535416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,19 +351,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 535274005316708473, guid: 6e43c6d04a6604c43943d2b6ce041529, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e43c6d04a6604c43943d2b6ce041529, type: 3}
---- !u!114 &511878183 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 535274005316708473, guid: 6e43c6d04a6604c43943d2b6ce041529, type: 3}
-  m_PrefabInstance: {fileID: 511878182}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c30f136602e935439e6bfbb031e93ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1007103027
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,8 +659,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 511878183}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 455416383}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
         m_Arguments:

@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5072392598586527875}
   - component: {fileID: 5072392598586527874}
   - component: {fileID: 5072392598586527877}
-  - component: {fileID: 535274005316708473}
+  - component: {fileID: 2482258047623860423}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &535274005316708473
+--- !u!114 &2482258047623860423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5072392598586527878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c30f136602e935439e6bfbb031e93ec, type: 3}
+  m_Script: {fileID: 11500000, guid: cff8f85bf26777044834e0d97d23ac92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpVelocity: {x: 2, y: 7}
+  _jumpVelocity: {x: 2, y: 10}

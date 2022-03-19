@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Vector2 _jumpVelocity = new Vector2(1f, 0.1f);
     private Rigidbody2D _rigidBody;
@@ -21,10 +21,6 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-
-        #if UNITY_EDITOR
-        Debug.Log("Jumping");
-        #endif
 
         var forwardVelocity = transform.position.x <= 0 ? _jumpVelocity.x : 0f;
 
