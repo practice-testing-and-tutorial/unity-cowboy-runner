@@ -8,16 +8,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 _jumpVelocity = new Vector2(1f, 0.1f);
     private Rigidbody2D _rigidBody;
 
-    private bool CanJump => _rigidBody.velocity.y == 0f;
+    private bool _canJump;
 
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
     }
 
+    private void FixedUpdate()
+    {
+        _canJump = _rigidBody.velocity.y == 0f;
+    }
+
     public void Jump()
     {
-        if (!CanJump)
+        if (!_canJump)
         {
             return;
         }

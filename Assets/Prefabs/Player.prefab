@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5072392598586527874}
   - component: {fileID: 5072392598586527877}
   - component: {fileID: 2482258047623860423}
+  - component: {fileID: 455416390}
+  - component: {fileID: 6230406283290483296}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -155,3 +157,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpVelocity: {x: 2, y: 10}
+--- !u!114 &455416390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072392598586527878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478b185f4285e1b4ab8c564a35a7638c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tagsToCheckWith:
+  - Obstacle
+  _autoDestroyThis: 0
+  _autoDestroyCollided: 0
+  _onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  _onCollisionExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6230406283290483296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072392598586527878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b154f4718f614a4b9f579f87ec4a76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -20,8 +20,8 @@ namespace Gupi2D
 		[Space(5f)]
 
 		[Header("Action/s Upon Collision")]
-		[SerializeField]
-		private UnityEvent _onCollision;
+		[SerializeField] private UnityEvent _onCollisionEnter;
+		[SerializeField] private UnityEvent _onCollisionExit;
 
 		private int _tagsCount;
 
@@ -34,7 +34,7 @@ namespace Gupi2D
 		{
 			if (!TagRegistered(collision.gameObject.tag)) return;
 
-			_onCollision.Invoke();
+			_onCollisionEnter.Invoke();
 
 			if (_autoDestroyCollided)
 			{
@@ -45,6 +45,13 @@ namespace Gupi2D
 			{
 				Destroy(gameObject);
 			}
+		}
+
+		private void OnCollisionExit2D(Collision2D collision)
+		{
+			if (!TagRegistered(collision.gameObject.tag)) return;
+
+			_onCollisionExit.Invoke();
 		}
 
 		private bool TagRegistered(string tag)
