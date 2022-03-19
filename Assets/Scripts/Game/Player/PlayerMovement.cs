@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _canJump = _rigidBody.velocity.y == 0f;
+        _canJump = Mathf.Abs(_rigidBody.velocity.y) < float.Epsilon;
     }
 
     public void Jump()
